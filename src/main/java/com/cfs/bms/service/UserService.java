@@ -56,4 +56,11 @@ public class UserService {
         userDto.setPhoneNumber(user.getPhoneNumber());
         return userDto;
     }
+
+    public void promoteToAdmin(Long id) {
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("User not found with id: " + id));
+        user.setRole("ROLE_ADMIN");
+        userRepository.save(user);
+    }
 }

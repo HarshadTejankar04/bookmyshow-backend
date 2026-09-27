@@ -34,4 +34,11 @@ public class UserController {
         // authentication.getName() returns the logged-in user's email from the JWT
         return ResponseEntity.ok("Logged in as: " + authentication.getName());
     }
+
+    @PutMapping("/{id}/promote")
+    @PreAuthorize("hasRole('ADMIN')")
+    public ResponseEntity<String> promoteToAdmin(@PathVariable Long id) {
+        userService.promoteToAdmin(id);
+        return ResponseEntity.ok("User promoted to ADMIN successfully");
+    }
 }
