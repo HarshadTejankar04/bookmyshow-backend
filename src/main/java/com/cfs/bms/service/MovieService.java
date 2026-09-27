@@ -52,14 +52,14 @@ public class MovieService {
 
     public List<MovieDto> getMovieByGenre(String genre)
     {
-        List<Movie> movies=movieRepository.findByLanguage(genre);
+        List<Movie> movies=movieRepository.findByGenre(genre);
         return movies.stream()
                 .map(this::mapToDto)
                 .collect(Collectors.toList());
     }
     public List<MovieDto> searchMovies(String title)
     {
-        List<Movie> movies=movieRepository.findByLanguage(title);
+        List<Movie> movies=movieRepository.findByTitleContaining(title);
         return movies.stream()
                 .map(this::mapToDto)
                 .collect(Collectors.toList());

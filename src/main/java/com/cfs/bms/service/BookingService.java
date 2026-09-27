@@ -161,7 +161,7 @@ public class BookingService {
         bookingDto.setId(booking.getId());
         bookingDto.setBookingNumber(booking.getBookingNumber());
         bookingDto.setBookingTime(booking.getBookingTime());
-        bookingDto.setStatus(bookingDto.getStatus());
+        bookingDto.setStatus(booking.getStatus());
         bookingDto.setTotalAmount(booking.getTotalAmount());
 
         //user
