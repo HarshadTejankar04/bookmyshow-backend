@@ -19,7 +19,7 @@ public class ShowController {
 
     @PostMapping
     public ResponseEntity<ShowDto> createShow(@RequestBody ShowDto showDto) {
-        return ResponseEntity.ok(showService.creteShow(showDto));
+        return ResponseEntity.ok(showService.createShow(showDto));
     }
 
     @GetMapping("/{id}")

@@ -196,11 +196,11 @@ public class BookingService {
 
 
         TheaterDto theaterDto=new TheaterDto();
-        theaterDto.setId(bookingDto.getShow().getScreen().getTheater().getId());
-        theaterDto.setName(bookingDto.getShow().getScreen().getTheater().getName());
-        theaterDto.setAddress(bookingDto.getShow().getScreen().getTheater().getAddress());
-        theaterDto.setCity(bookingDto.getShow().getScreen().getTheater().getCity());
-        theaterDto.setTotalScreens(bookingDto.getShow().getScreen().getTheater().getTotalScreens());
+        theaterDto.setId(booking.getShow().getScreen().getTheater().getId());
+        theaterDto.setName(booking.getShow().getScreen().getTheater().getName());
+        theaterDto.setAddress(booking.getShow().getScreen().getTheater().getAddress());
+        theaterDto.setCity(booking.getShow().getScreen().getTheater().getCity());
+        theaterDto.setTotalScreens(booking.getShow().getScreen().getTheater().getTotalScreens());
 
         screenDto.setTheater(theaterDto);
         showDto.setScreen(screenDto);

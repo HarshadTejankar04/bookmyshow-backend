@@ -32,7 +32,7 @@ public class ShowService {
     @Autowired
     private ShowSeatRepository showSeatRepository;
 
-    public ShowDto creteShow(ShowDto showDto)
+    public ShowDto createShow(ShowDto showDto)
     {
         Show show=new Show();
         Movie movie=movieRepository.findById(showDto.getMovie().getId())
